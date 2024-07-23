@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet"  href = "style.css"/>
+</head>
+<body>
+    <div id = "nav">
+        
+    </div>
+    <div class = "body">
+        
+        <div id = "container">
+            <div class = "heading">
+                Bangalore : Routes And Restaurants
+            </div>
+            <div class = "box">
+                <div class = "inputs">
+                    <input id = "origin" type = "text" placeholder="Enter origin"><br>
+                    <input id = "dest" type = "text" placeholder="Enter destination">
+                </div>
+                <div id = "buttons">
+                    <div id = "button1">
+                        <div id = "ddr"><button>DDR</button></div>
+                        <div id = "route"><button>Route</button></div>
+                    </div>
+                    <div id = "button2">
+                        <div id = "busT1"><button>BusTimings(S->D)</button></div>
+                        <div id = "busT2"><button>BusTimings(D->S)</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class = "begin-js">
+                <div id = "info"></div>
+                <div id = "stops"></div>
+                <div id = "timings1" class = "timings-container"></div>
+                <div id = "timings2"></div>
+            </div>
+        </div>
+        <div id ="line">Restaurants</div>
+            <div id = "restaurants">
+                <div id = "location">
+                    <input id = "loc" type = "text" placeholder="Enter location">
+                </div>
+                <div id = "Rbtn">
+                    <button id = "rest">Restaurants</button>
+                </div>
+            </div>
+            <div id = "Restuar">
+
+            </div>
+        </div>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</html>

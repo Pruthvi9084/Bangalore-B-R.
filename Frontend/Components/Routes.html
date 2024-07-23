@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href = "/Styles/Routes.css" rel = "stylesheet"/>
+</head>
+<body>
+    
+    <div>
+        <a href="../index.html" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 my-4 mx-4">Home</a>
+        <a href="../Components/Restaurants.html" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 my-4 mx-4">Restaurants</a>
+        <a href="../Components/Pictures.html" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 my-4 mx-4">Pictures</a>
+    </div>
+
+    <div class = "text-center my-4">
+        <h1 class = "text-4xl">Routes</h1>
+    </div>
+
+    <div id = "Description" class = "text-center">
+        <h3>Discover bus routes, access real-time bus timings,<br> 
+            and obtain detailed route information.
+        </h3>
+    </div>
+    
+    <div class="card bg-white rounded-lg shadow-lg overflow-hidden m-4">
+        <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">User Input</h2>
+            <div class="mb-4">
+                <label for="boardingPoint" class="block text-sm font-medium text-gray-700">Boarding Point:</label>
+                <input type="text" id="boardingPoint" name="boardingPoint" class="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            <div class="mb-4">
+                <label for="destination" class="block text-sm font-medium text-gray-700">Destination:</label>
+                <input type="text" id="destination" name="destination" class="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+            <div class="flex justify-between">
+                <button id = "ddr" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Distance & Duration</button>
+                <button id = "bt-1" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Bus Timings (Boarding to Destination)</button>
+                <button id = "bt-2" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">Bus Timings (Destination to Boarding)</button>
+                <button id = "stop" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Route Path</button>
+            </div>
+        </div>
+    </div>
+    <div id = "route"></div>
+    <div id = "Bt-1"></div>
+    <div id = "Bt-2"></div>
+    <div id = "stops"></div>
+
+
+      
+
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../ApiRoutes/Routes.js" defer></script>
+</html>

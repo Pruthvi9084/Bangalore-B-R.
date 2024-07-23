@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/Styles/Pictures.css" rel="stylesheet"/>
+</head>
+<body>
+    <div>
+        <a href="../index.html" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 my-4 mx-4">Home</a>
+        <a href="../Components/Routes.html" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 my-4 mx-4">Routes</a>
+        <a href="../Components/Restaurants.html" class="inline-block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 my-4 mx-4">Restaurants</a>
+    </div>
+
+    <div class="text-center my-4">
+        <h1 class="text-4xl font-bold">Pictures</h1>
+    </div>
+
+    <div id="Description" class="text-center">
+        <h3 class="text-lg font-semibold">Share memories and let other see you memories.</h3>
+    </div>
+
+    <div class="container mx-auto p-4">
+        
+        <div class="max-w-full bg-white rounded-lg overflow-hidden shadow-lg mb-4">
+            <div class="p-4">
+                <h2 class="text-lg font-semibold mb-2">Search Image Reviews</h2>
+                <form id="searchForm">
+                    <label for="searchLocation">Enter Location:</label>
+                    <input type="text" id="searchLocation" name="location" required class="block w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 mb-2">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-full bg-white rounded-lg overflow-hidden shadow-lg">
+            <div class="p-4">
+                <h2 class="text-lg font-semibold mb-2">Upload Image Review</h2>
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required class="block w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 mb-2"><br>
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required class="block w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 mb-2"><br>
+                    <label for="review">Review:</label>
+                    <textarea id="review" name="review" rows="4" required class="block w-full border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 mb-2"></textarea><br>
+                    <label for="file">Image:</label>
+                    <input type="file" id="file" name="file" accept="image/*" required class="mb-2"><br>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="imageContainer"></div>
+
+    <script src="../ApiRoutes/Pictures.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
